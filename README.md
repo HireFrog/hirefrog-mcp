@@ -97,7 +97,8 @@ Each result includes an **Open in HireFrog** link to the same role, agent or pag
   When your assistant asks for a change that you confirm in HireFrog,
   HireFrog stores that request, with exactly what it would change, until you
   confirm or cancel it or it expires after 24 hours, and deletes it one day
-  after that.
+  after that. If it made a tailored résumé or cover letter, HireFrog
+  keeps it for 30 days so you can still review and save the documents.
 - **What the assistant's company sees:** whatever your assistant reads goes
   to Anthropic (Claude) or OpenAI (ChatGPT), and they handle it under their
   own terms, like anything else you share with them.
