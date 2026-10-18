@@ -64,7 +64,7 @@ If the request didn't come from Claude or ChatGPT, it offers only Cancel.
 - see your agents (including their search filters, such as a salary range) and how many roles each has at every stage;
 - list and search the roles in your pipeline;
 - read one role in full: the posting, your match, your notes and its stage history;
-- read a summary of your profile: headline, skills, location, job preferences and work history;
+- read a summary of your profile: name, headline, skills, location, job preferences and work history;
 - see which résumés and cover letters you have, and their status, but not their text.
 
 **Change**, directly:
@@ -93,7 +93,11 @@ Each result includes an **Open in HireFrog** link to the same role, agent or pag
 ## Privacy
 
 - **What HireFrog keeps:** a daily count of requests per tool and per app, so
-  you can see your usage in Settings. Never what was asked or answered.
+  you can see your usage in Settings, never your questions or the answers.
+  When your assistant asks for a change that you confirm in HireFrog,
+  HireFrog stores that request, with exactly what it would change, until you
+  confirm or cancel it or it expires after 24 hours, and deletes it one day
+  after that.
 - **What the assistant's company sees:** whatever your assistant reads goes
   to Anthropic (Claude) or OpenAI (ChatGPT), and they handle it under their
   own terms, like anything else you share with them.
