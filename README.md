@@ -138,7 +138,7 @@ Questions: support@hirefrog.co.
 ## For developers
 
 - **Protocol:** MCP over Streamable HTTP at `https://mcp.hirefrog.co/mcp`,
-  stateless, JSON responses (no SSE). Tools only: no resources or prompts.
+  tools only.
 - **Authorization:** OAuth 2.1 with PKCE (S256) through HireFrog's Supabase
   Auth server, with dynamic client registration. Protected resource metadata
   is at `/.well-known/oauth-protected-resource/mcp`; the 401 challenge and
@@ -146,13 +146,10 @@ Questions: support@hirefrog.co.
 - **Which apps:** only clients whose every registered redirect URI is on
   `claude.ai` or `chatgpt.com` exactly (https, no port, no subdomain) are
   approved. Everything else is refused by the server and by the database.
-- **Tokens:** every request's token is checked with HireFrog's Auth server and
-  must carry this project's issuer, `aud: authenticated`, `role:
-  authenticated` and a `client_id`. A HireFrog browser session is refused.
+- **Tokens:** every request's token is verified against HireFrog's Auth
+  server; a HireFrog browser session is refused.
 - **Runs as you:** every read and write runs on your own token under
   HireFrog's database access rules. The server holds no administrator key.
-  The database, not the server, is the boundary: connector tokens are
-  restricted the same way whether they come through the connector or not.
 - **Requests and confirmation:** a request is stored by the database with its
   exact arguments; only HireFrog's own page, under your normal sign-in, turns
   it into a card and runs it after your click. A connector token can never
@@ -168,10 +165,10 @@ Questions: support@hirefrog.co.
   `request_run_agent_search`, `request_update_roles`,
   `request_dismiss_agent_roles`, `request_update_profile`,
   `request_tailor_documents`.
-- **Kill switch:** HireFrog can turn the connector off for everyone within
-  seconds.
 
 Security issues: see [SECURITY.md](SECURITY.md).
+
+Privacy: https://hirefrog.co/privacy
 
 ## License
 
