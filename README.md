@@ -9,11 +9,9 @@ account.
 
 This repository is the connector's public documentation and security
 policy. The connector itself is hosted by HireFrog: there is nothing here to
-install or run. (An earlier self-hosted version is retired, see
-[Retired: v0.1](#retired-v01).)
+install or run.
 
-> While the connector is in testing it is open to invited HireFrog accounts.
-> You need a HireFrog account either way.
+You need a HireFrog account.
 
 Claude and ChatGPT rename their menus from time to time, so the names below
 may differ slightly from what you see. In ChatGPT, the menu may be called
@@ -125,8 +123,6 @@ holds. You can also remove the connector in Claude or ChatGPT.
 
 ## Troubleshooting
 
-- **"HireFrog's connector isn't available on your account yet."** It's in
-  testing and invite-only for now.
 - **"HireFrog only connects to Claude and ChatGPT…"** The connection didn't
   come from Claude's or ChatGPT's own sign-in, or you disconnected it. Add
   HireFrog again from Claude or ChatGPT.
@@ -172,16 +168,10 @@ Questions: support@hirefrog.co.
   `request_run_agent_search`, `request_update_roles`,
   `request_dismiss_agent_roles`, `request_update_profile`,
   `request_tailor_documents`.
-- **Kill switch and allowlist:** HireFrog can turn the connector off for
-  everyone within seconds, and admits users by allowlist while in testing.
+- **Kill switch:** HireFrog can turn the connector off for everyone within
+  seconds.
 
 Security issues: see [SECURITY.md](SECURITY.md).
-
-## Retired: v0.1
-
-The first version of HireFrog's MCP server was self-hosted: you ran it
-yourself. It is retired and no longer available. Use the hosted connector
-above instead.
 
 ## License
 
